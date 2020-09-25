@@ -19,9 +19,25 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import Argon from "./plugins/argon-kit";
-import './registerServiceWorker'
+import './registerServiceWorker';
+import VueProgressBar from 'vue-progressbar'
 
 Vue.config.productionTip = false;
+
+const options = {
+  color: '#FFCC00',
+  failedColor: '#874b4b',
+  thickness: '5px',
+  transition: {
+    speed: '0.2s',
+    opacity: '0.6s',
+    termination: 300
+  },
+  autoRevert: true,
+  location: 'top',
+  inverse: false
+}
+Vue.use(VueProgressBar, options)
 Vue.use(Argon);
 new Vue({
   router,

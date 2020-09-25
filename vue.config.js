@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
+  publicPath: "/vue-project/",
   configureWebpack: {
     // Set up all the aliases we use in our app.
     plugins: [

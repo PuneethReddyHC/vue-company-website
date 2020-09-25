@@ -1,42 +1,47 @@
 <template>
     <div>
-        <hero></hero>
-        <basic-elements></basic-elements>
-        <inputs></inputs>
-        <custom-controls></custom-controls>
-        <navigation></navigation>
-        <javascript-components></javascript-components>
-        <icons></icons>
-        <examples></examples>
-        <download-section></download-section>
+        <main-slider></main-slider>
+        <features></features>
+        <service-area></service-area>
+        <pricing-area></pricing-area>
+        <pricing-card></pricing-card>
+        <customer-support></customer-support>
+        
+        <!-- Item 01 -->
+        <portfolio></portfolio>
+        
+        <amazing-team></amazing-team>
         <carousel></carousel>
+        <say-hello-area></say-hello-area>
     </div>
 </template>
 <script>
-import Hero from "./components/Hero";
-import BasicElements from "./components/BasicElements";
-import Inputs from "./components/Inputs";
-import CustomControls from "./components/CustomControls";
-import Navigation from "./components/Navigation";
-import JavascriptComponents from "./components/JavascriptComponents";
+import MainSlider from "./components/MainSlider";
+import Features from "./components/Features";
+import ServiceArea from "./components/ServiceArea";
+import AppStart from "./components/AppStart";
+import PricingCard from "./components/PricingCard";
+import PricingArea from "./components/PricingArea";
+import CustomerSupport from "./components/CustomerSupport";
+import AmazingTeam from "./components/AmazingTeam";
 import Carousel from "./components/Carousel";
-import Icons from "./components/Icons";
-import Examples from "./components/Examples";
-import DownloadSection from "./components/DownloadSection";
+import SayHelloArea from "./components/SayHelloArea";
+import Portfolio from "./components/Portfolio";
 
 export default {
   name: "components",
   components: {
-    Hero,
-    BasicElements,
-    Inputs,
-    CustomControls,
-    Navigation,
-    JavascriptComponents,
+    MainSlider,
+    Features,
+    ServiceArea,
+    AppStart,
+    PricingArea,
+    PricingCard,
+    CustomerSupport,
+    AmazingTeam,
     Carousel,
-    Icons,
-    Examples,
-    DownloadSection
+    SayHelloArea,
+    Portfolio
   }
 };
 </script>

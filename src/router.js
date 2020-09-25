@@ -7,55 +7,78 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
-
+import MyHeader from "./layout/MyAppHeader"
+import MyAppFooter from "./layout/MyAppFooter";
+import ContactUs from "./views/ContactUs";
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   linkExactActiveClass: "active",
   routes: [
     {
       path: "/",
       name: "components",
       components: {
-        header: AppHeader,
+        header: MyHeader,
         default: Components,
-        footer: AppFooter
+        footer: MyAppFooter
+      },
+      meta: {
+        showProgressBar: true
       }
     },
     {
       path: "/landing",
       name: "landing",
       components: {
-        header: AppHeader,
+        header: MyHeader,
         default: Landing,
         footer: AppFooter
+      },
+      meta: {
+        showProgressBar: true
       }
     },
     {
       path: "/login",
       name: "login",
       components: {
-        header: AppHeader,
+        header: MyHeader,
         default: Login,
         footer: AppFooter
+      },
+      meta: {
+        showProgressBar: true
       }
     },
     {
       path: "/register",
       name: "register",
       components: {
-        header: AppHeader,
+        header: MyHeader,
         default: Register,
         footer: AppFooter
+      },
+      meta: {
+        showProgressBar: false
       }
     },
     {
       path: "/profile",
       name: "profile",
       components: {
-        header: AppHeader,
+        header: MyHeader,
         default: Profile,
         footer: AppFooter
+      }
+    },
+    {
+      path: "/contact",
+      name: "contact-us",
+      components: {
+        header: MyHeader,
+        default: ContactUs,
+        footer: MyAppFooter
       }
     }
   ],
@@ -67,3 +90,7 @@ export default new Router({
     }
   }
 });
+
+
+
+export default router
