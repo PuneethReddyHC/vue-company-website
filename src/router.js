@@ -10,6 +10,10 @@ import Profile from "./views/Profile.vue";
 import MyHeader from "./layout/MyAppHeader"
 import MyAppFooter from "./layout/MyAppFooter";
 import ContactUs from "./views/ContactUs";
+import PortfolioPage from "./views/PortfolioPage";
+import AboutPage from "./views/AboutPage";
+import BlogPage from "./views/BlogPage";
+import BlogDetails from "./views/BlogDetails";
 Vue.use(Router);
 
 const router = new Router({
@@ -78,6 +82,41 @@ const router = new Router({
       components: {
         header: MyHeader,
         default: ContactUs,
+        footer: MyAppFooter
+      }
+    },
+    {
+      path: "/portfolio",
+      name: "portfolio-page",
+      components: {
+        header: MyHeader,
+        default: PortfolioPage,
+        footer: MyAppFooter
+      }
+    },{
+      path: "/about",
+      name: "about-page",
+      components: {
+        header: MyHeader,
+        default: AboutPage,
+        footer: MyAppFooter
+      }
+    },
+    {
+      path: "/blogs",
+      name: "blogs-page",
+      components: {
+        header: MyHeader,
+        default: BlogPage,
+        footer: MyAppFooter
+      }
+    },
+    {
+      path: "/blogdetails",
+      name: "blogdetails-page",
+      components: {
+        header: MyHeader,
+        default: BlogDetails,
         footer: MyAppFooter
       }
     }

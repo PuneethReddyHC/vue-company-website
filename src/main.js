@@ -21,6 +21,8 @@ import router from "./router";
 import Argon from "./plugins/argon-kit";
 import './registerServiceWorker';
 import VueProgressBar from 'vue-progressbar'
+import '@morioh/v-lightbox/dist/lightbox.css';
+import Lightbox from '@morioh/v-lightbox'
 
 Vue.config.productionTip = false;
 
@@ -38,6 +40,7 @@ const options = {
   inverse: false
 }
 Vue.use(VueProgressBar, options)
+Vue.use(Lightbox);
 Vue.use(Argon);
 new Vue({
   router,

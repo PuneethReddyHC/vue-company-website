@@ -1,6 +1,13 @@
 <template>
-    <section class="section-padding2">
+    <section class="mb-5 mt-5">
         <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-tittle text-center">
+                            <h2>Our<span class="text-success"> Port</span>folio</h2>
+                        </div>
+                    </div>
+            </div>
             <div class="row">
                   <portfolio-card></portfolio-card>
             </div> <!-- / row -->

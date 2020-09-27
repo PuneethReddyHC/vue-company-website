@@ -17,9 +17,10 @@
                                 <nav >
                                     <ul id="navigation">   
                                         <li class="active"><router-link to="/"> Home</router-link></li>
-                                        <li><router-link to="/landing">About</router-link></li>
-                                        <li><router-link to="/profile">Blogs</router-link></li>
-                                        <li><router-link to="/login">Services</router-link></li>
+                                        <li><router-link to="/about">About</router-link></li>
+                                        <li><router-link to="/blogs">Blogs</router-link></li>
+                                        <li><router-link to="/Portfolio">Portfolio</router-link></li>
+                                        <li><router-link to="/contact">Contact</router-link></li>
                                         <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
                                             <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
                                                 <i class="ni ni-ui-04 d-lg-none"></i>

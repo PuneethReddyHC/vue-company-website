@@ -8,10 +8,12 @@
         <customer-support></customer-support>
         
         <!-- Item 01 -->
+        
         <portfolio></portfolio>
         
         <amazing-team></amazing-team>
         <carousel></carousel>
+        <image-gallery></image-gallery>
         <say-hello-area></say-hello-area>
     </div>
 </template>
@@ -27,7 +29,7 @@ import AmazingTeam from "./components/AmazingTeam";
 import Carousel from "./components/Carousel";
 import SayHelloArea from "./components/SayHelloArea";
 import Portfolio from "./components/Portfolio";
-
+import ImageGallery from "./components/ImageGallery";
 export default {
   name: "components",
   components: {
@@ -41,7 +43,8 @@ export default {
     AmazingTeam,
     Carousel,
     SayHelloArea,
-    Portfolio
+    Portfolio,
+    ImageGallery
   }
 };
 </script>
