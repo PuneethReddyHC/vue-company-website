@@ -1,5 +1,5 @@
 <template>
-    <section class="section bg-secondary">
+    <section class="section sky-blue">
             <div class="container">
                 <div class="row row-grid align-items-center">
                     <div class="col-md-6">

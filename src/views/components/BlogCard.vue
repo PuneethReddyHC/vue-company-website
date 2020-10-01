@@ -1,6 +1,6 @@
 <template>
     <article class="blog_item post-2"> 
-        <card class="single-card" id="post-2 ">
+        <card class="single-card blog-bg" id="post-2 ">
                 <div class="blog_item_img">
                     <div class="">
                         <b-carousel id="carousel1" controls>
@@ -26,7 +26,7 @@
                 </a>
                 <p>
                 
-                    <a href="/category/heroku.html" rel="category tag" title="View all articles categorised by heroku"><i class="fas fa-filter"></i> heroku </a>
+                    <a href="/category/heroku.html" rel="category tag" title="View all articles categorised by heroku"><i class="fa fa-filter"></i> heroku </a>
                 
                 </p>
                 <p class="card-text">There are always challenges when it comes to debugging applications. Node.js' asynchronous workflows add an extra layer of complexity to this arduous process. Although there have been some updates made to the V8 engine in order to easily access async...</p>
@@ -129,9 +129,7 @@ export default {
     margin-bottom: 0;
     font-weight: 400;
 }
-.blog_details .author .info h3 span {
-    color: #000000;
-}
+
 .blog_details .text h3 {
     font-weight: 700;
     font-size: 28px;

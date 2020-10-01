@@ -25,7 +25,7 @@
       font-size: 16px;
       margin-bottom: 0;
       font-size: 16px;
-      color: #2a2a2a;
+      color: $slicknav-font;
       a{
         &:hover{
           color: $theme-color2;
@@ -34,7 +34,7 @@
     }
 
     p{
-      color: #8a8a8a;
+      color: $font_color1;
     }
   }
 }

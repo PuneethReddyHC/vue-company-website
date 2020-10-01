@@ -9,6 +9,8 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^22.0.0",
+    "@ckeditor/ckeditor5-vue": "^1.0.3",
     "@morioh/v-lightbox": "^1.0.3",
     "bootstrap-vue": "^2.0.4",
     "express": "^4.17.1",
@@ -18,6 +20,7 @@
     "register-service-worker": "^1.5.2",
     "serve-static": "^1.14.1",
     "vue": "^2.6.6",
+    "vue-dark-mode-switch": "^1.0.6",
     "vue-flatpickr-component": "^8.1.1",
     "vue-lazyload": "^1.2.6",
     "vue-progressbar": "^0.7.5",
@@ -25,12 +28,15 @@
     "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-plugin-pwa": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
+    "deepmerge": "^4.2.2",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
+    "sass": "^1.26.11",
+    "sass-loader": "^7.3.1",
     "vue-template-compiler": "^2.6.6"
   }
 }

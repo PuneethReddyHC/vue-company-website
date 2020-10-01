@@ -5,7 +5,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <div class="section-tittle text-center">
-                            <h2>How Can We HelpYour<br><span class="text-success">with Appco!</span></h2>
+                            <h2 class="heading">How Can We HelpYour<br><span class="text-success">with Appco!</span></h2>
                         </div>
                     </div>
                 </div>
@@ -14,7 +14,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
-                                <span class="flaticon-businessman"></span>
+                                        <i class="ni ni-badge"></i>
                             </div> 
                             <div class="service-cap">
                                 <h4><a href="#">Easily Manage</a></h4>

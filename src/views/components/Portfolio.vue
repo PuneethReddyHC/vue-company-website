@@ -1,5 +1,5 @@
 <template>
-    <section class="mb-5 mt-5">
+    <section class="sky-blue">
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">

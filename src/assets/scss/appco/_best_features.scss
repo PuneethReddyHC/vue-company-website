@@ -1,5 +1,6 @@
 .best-features-area{
     position: relative;
+    background-color: $features-background;
     .single-features{
         display: flex;
         @media #{$xs}{
@@ -8,7 +9,7 @@
         .features-icon{
             span{
                 position: relative;
-                color:#fff;
+                color: $white;
                 font-size: 30px;
                 height: 67px;
                 width: 67px;
@@ -26,7 +27,7 @@
                 font-weight: 600;
                 line-height: 1.2;
                 margin-bottom: 10px;
-                color: #23182c;
+                color: $features-caption;
             }
             p{
                 @media #{$md}{

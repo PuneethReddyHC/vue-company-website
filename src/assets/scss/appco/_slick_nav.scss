@@ -198,7 +198,7 @@
       background: #fff !important;
   }
   .slicknav_nav {
-      background: #fff;
+      background: $sky-blue;
       float: right;
       margin-top: 11px;
       padding: 19px;
@@ -214,7 +214,7 @@
   .slicknav_nav a {
       font-size: 14px;
       font-weight: 400;
-      color: #000;
+      color: $slicknav-font;
       text-transform: capitalize;
   }
   
@@ -227,7 +227,7 @@
       border-radius: 0;
       background-color: #F79960;
       background-color: transparent;
-      color: #000;
+      color: var(--hover__color);
   }
   .slicknav_btn {
       background-color: transparent;

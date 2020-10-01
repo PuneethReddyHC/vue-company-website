@@ -43,7 +43,7 @@
                     <a target="_blank" rel="noopener" href="https://github.com/creativetimofficial"
                        class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip"
                        data-original-title="Star on Github">
-                        <i class="fa fa-github"></i>
+                        <i class="fa fa-githubfa fa-github"></i>
                     </a>
                 </div>
             </div>

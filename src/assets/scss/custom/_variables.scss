@@ -23,6 +23,10 @@ $gray-700: #525f7f !default;   // Line p color
 $gray-800: #32325d !default;   // Line heading color
 $gray-900: #212529 !default;
 $black:    #000 !default;
+$link-disabled:              #666666 !default;
+$transparent-bg:             transparent !default;
+$light-bg:                   #f5f6fa !default;
+$dark-background:            #555555 !default;
 
 $grays: () !default;
 $grays: map-merge((
@@ -47,6 +51,19 @@ $yellow:  #ffd600 !default;
 $green:   #2dce89 !default;
 $teal:    #11cdef !default;
 $cyan:    #2bffc6 !default;
+
+$default-states:       #263148 !default;
+$primary-states:       #ba54f5 !default;
+$success-states:       #0098f0 !default;
+$info-states:          #3358f4 !default;
+$warning-states:       #ff6491 !default;
+$danger-states:        #ec250d !default;
+$black-states:         #1d253b !default;
+$vue-states:           #389466 !default;
+
+$background-black:           #1e1e2f !default;
+$background-states-black:    #1e1e24 !default;
+
 
 $colors: () !default;
 $colors: map-merge((
@@ -87,6 +104,22 @@ $youtube:       #cd201f !default;
 $slack:         #3aaf85 !default;
 $dribbble:      #ea4c89 !default;
 $github:        #222222 !default;
+$facebook-states:       darken($facebook, 5%) !default;
+$twitter-states:        darken($twitter, 5%) !default;
+$google-plus-states:    darken($google-plus, 5%) !default;
+$instagram-states:      lighten($instagram, 6%) !default;
+$linkedin:              #0077B5 !default;
+$linkedin-states:       darken($linkedin, 5%) !default;
+$pinterest-states:      lighten($pinterest, 6%) !default;
+$youtube-states:        lighten($youtube, 6%) !default;
+$dribbble-states:       lighten($dribbble, 6%) !default;
+$github-states:         #ccc !default;
+$reddit:                #ff4500 !default;
+$reddit-states:         lighten($reddit, 6%) !default;
+$tumblr:                #35465c !default;
+$tumblr-states:         lighten($tumblr, 6%) !default;
+$behance:               #1769ff !default;
+$behance-states:        lighten($behance, 6%) !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -106,6 +139,7 @@ $theme-colors: map-merge((
 $brand-colors: () !default;
 $brand-colors: map-merge((
   "facebook":     $facebook,
+  "linkedin" :    $linkedin,
   "twitter":      $twitter,
   "google-plus":  $google-plus,
   "instagram":    $instagram,
@@ -113,7 +147,9 @@ $brand-colors: map-merge((
   "youtube":      $youtube,
   "slack":        $slack,
   "dribbble":     $dribbble,
-  "github":       $github
+  "github":       $github,
+  "behance":      $behance,
+  "tumblr":       $tumblr
 ), $brand-colors);
 
 $shape-colors: () !default;
@@ -886,3 +922,29 @@ $footer-link-color: $gray-600 !default;
 $footer-link-hover-color: $gray-700 !default;
 $footer-heading-color: $gray-600 !default;
 $footer-heading-font-size: $font-size-sm !default;
+
+
+$light-gray:                 #E3E3E3 !default;
+$medium-gray:                #DDDDDD !default;
+$dark-gray:                  #9A9A9A !default;
+$card-stats-gray:            #808080 !default;
+$active-gray:                #777777 !default;
+$nav-gray:                   #444444 !default;
+$search-gray:                #b7b7b7 !default;
+$calendar-gray:              #9499a7 !default;
+$active-blue:                #00bbff !default;
+
+$opacity-gray-3:             rgba(222,222,222, .3) !default;
+$opacity-gray-5:             rgba(222,222,222, .5) !default;
+$opacity-gray-8:             rgba(222,222,222, .8) !default;
+
+
+$opacity-5:                  rgba(255,255,255, .5) !default;
+$opacity-6:                  rgba(255,255,255, .6) !default;
+$opacity-8:                  rgba(255,255,255, .8) !default;
+
+
+
+$opacity-1:                  rgba(255,255,255, .1) !default;
+$opacity-2:                  rgba(255,255,255, .2) !default;
+

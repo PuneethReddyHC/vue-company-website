@@ -49,9 +49,10 @@
 
 .pricing-card-area{
     margin-top: -295px;
+    background-color: var(--color__bg);
     .single-card{
         position: relative;
-        background: #fff;
+        background: $card__background;
         padding: 40px 25px;
         border-radius: 6px;
         box-shadow: 0px 0px 9px 0px rgba(131, 93, 248, 0.07);

@@ -27,7 +27,7 @@ export default {};
 @import url('https://fonts.googleapis.com/css?family=Anton|Buenard:400,700');
 
 
-.icon {
+.icon path{
 	display: block;
 	width: 1.5em;
 	height: 1.5em;
@@ -184,7 +184,7 @@ export default {};
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #ececec;
+	background: var(--color__bg);
 	opacity: 0;
 	display: flex;
 	flex-direction: column;

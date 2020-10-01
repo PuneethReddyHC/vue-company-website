@@ -17,7 +17,7 @@
                                 <nav >
                                     <ul id="navigation">   
                                         <li class="active"><router-link to="/"> Home</router-link></li>
-                                        <li><router-link to="/about">About</router-link></li>
+                                        <li><router-link to="/about" class="white">About</router-link></li>
                                         <li><router-link to="/blogs">Blogs</router-link></li>
                                         <li><router-link to="/Portfolio">Portfolio</router-link></li>
                                         <li><router-link to="/contact">Contact</router-link></li>
@@ -55,17 +55,16 @@
                                         <li><a href="#">Pages</a>
                                             <ul class="submenu">
                                                 <li><router-link to="/contact">Contact</router-link></li>
-                                                <li><a href="single-blog.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
+                                                <li><router-link to="/blogdetails">Blog Details</router-link></li>
                                             </ul>
                                         </li>
-                                        <li><router-link to="/register">Contact</router-link></li>
+                                        <li><DarkModeSwitch @switched="onSwitched" :initialState="isDarkModeEnabled"/></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <!-- Mobile Menu -->
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
@@ -80,11 +79,25 @@ import BaseNav from "@/components/BaseNav";
 import BaseDropdown from "@/components/BaseDropdown";
 import CloseButton from "@/components/CloseButton";
 
+import DarkModeSwitch from 'vue-dark-mode-switch'
+import 'vue-dark-mode-switch/dist/vue-dark-mode-switch.css'
 export default {
+  data() {
+    return {
+      theme: 'light', // default theme to use when the site is first loaded
+      isDarkModeEnabled: false
+    }
+  },
   components: {
     BaseNav,
     CloseButton,
-    BaseDropdown
+    BaseDropdown,
+    DarkModeSwitch
+  },
+  watch: {
+    theme(theme) {
+      document.documentElement.dataset.theme = theme // this is where the magic happens
+    } // the `dataset.theme` is the data-theme attribute I set in my SCSS file (highlighted above)
   },
   created() {
     
@@ -114,8 +127,27 @@ export default {
             closedSymbol: '+',
             openedSymbol:'-'
         });
+        
         };
-    }
+        // const darktheme = localStorage.getItem("dark_theme");
+        // console.log('local storage :', darktheme);
+        // this.isDarkModeEnabled = darktheme;
+        // if (darktheme) {
+        //     if (this.isDarkModeEnabled) {
+        //         this.theme = 'dark';
+        //     } else {
+        //         this.theme = 'light';
+        //     }
+        // }
+    },
+  methods: {
+    onSwitched: function (isSwitched) {
+              this.theme = this.theme === 'light' ? 'dark' : 'light'
+              localStorage.setItem("dark_theme", isSwitched);
+                console.log('dark mode is enabled :', isSwitched);
+            }
+    
+  },
 };
 </script>
 <style>

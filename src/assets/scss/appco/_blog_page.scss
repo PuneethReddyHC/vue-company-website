@@ -12,7 +12,7 @@
         text-decoration: none;
         transition: .4s;
         &:hover, :hover{
-            background: -webkit-linear-gradient( 131deg, $theme-color 0%, $theme-color 99%);
+            background: -webkit-linear-gradient( 131deg, var(--hover__color) 0%, var(--hover__color) 99%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
@@ -20,7 +20,9 @@
         }
     }
 }
-
+.blog_details .author .info h3 span {
+    color: $features-caption;
+}
 .single-blog {
     overflow: hidden;
     margin-bottom: 30px;
@@ -525,7 +527,9 @@
 .blog_item {
     margin-bottom: 50px;
 }
-
+.blog-bg {
+    background-color: var(--blogcard__background);
+}
 .blog_details {
     padding: 30px 0 20px 10px;
     box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);
@@ -658,7 +662,7 @@
     }
 
     .single_sidebar_widget {
-        background: #fbf9ff;
+        background:var(--blogcard__background);
         padding: 30px;
         margin-bottom: 30px;
         .btn_1{

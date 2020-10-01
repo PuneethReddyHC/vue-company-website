@@ -13,6 +13,31 @@
   }
 }
 
+@mixin form-control-placeholder($color, $opacity){
+  .form-control::-moz-placeholder{
+      color: $color;
+      @include opacity(1);
+  }
+  .form-control:-moz-placeholder{
+      color: $color;
+      @include opacity(1);
+  }
+  .form-control::-webkit-input-placeholder{
+      color: $color;
+      @include opacity(1);
+  }
+  .form-control:-ms-input-placeholder{
+      color: $color;
+      @include opacity(1);
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
 
 @mixin form-validation-state($state, $color) {
   .#{$state}-feedback {

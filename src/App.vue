@@ -1,21 +1,36 @@
 <template>
     <div id="app">
+      
         <router-view name="header"></router-view>
         <vue-progress-bar></vue-progress-bar>
         <main>
+          
+          
             <fade-transition origin="center" mode="out-in" :duration="250">
+              
                 <router-view/>
             </fade-transition>
+            
         </main>
         <router-view name="footer"></router-view>
+        <ScrollTopComponent>
+          <fade-transition origin="center" mode="out-in" :duration="250">
+              <icon name="ni ni-bold-up" size="md" class="bg-gradient-primary" color="white" shadow
+                  rounded></icon>
+          </fade-transition>
+      </ScrollTopComponent>
     </div>
 </template>
 <script>
+
+import ScrollTopComponent from './views/components/ScrollTop'
 import { FadeTransition } from "vue2-transitions";
 export default {
   components: {
     FadeTransition,
+    ScrollTopComponent
   },
+  
   mounted () {
     //  [App.vue specific] When App.vue is finish loading finish the progress bar
     this.$Progress.finish()

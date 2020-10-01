@@ -23,6 +23,7 @@ import './registerServiceWorker';
 import VueProgressBar from 'vue-progressbar'
 import '@morioh/v-lightbox/dist/lightbox.css';
 import Lightbox from '@morioh/v-lightbox'
+import CKEditor from '@ckeditor/ckeditor5-vue';
 
 Vue.config.productionTip = false;
 
@@ -42,7 +43,9 @@ const options = {
 Vue.use(VueProgressBar, options)
 Vue.use(Lightbox);
 Vue.use(Argon);
+Vue.use( CKEditor );
 new Vue({
   router,
+  
   render: h => h(App)
 }).$mount("#app");

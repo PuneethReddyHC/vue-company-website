@@ -15,9 +15,11 @@
         <carousel></carousel>
         <image-gallery></image-gallery>
         <say-hello-area></say-hello-area>
+        
     </div>
 </template>
 <script>
+
 import MainSlider from "./components/MainSlider";
 import Features from "./components/Features";
 import ServiceArea from "./components/ServiceArea";
@@ -44,7 +46,10 @@ export default {
     Carousel,
     SayHelloArea,
     Portfolio,
-    ImageGallery
+    ImageGallery,
   }
 };
 </script>
+<style>
+
+</style>

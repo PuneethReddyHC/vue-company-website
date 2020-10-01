@@ -1,14 +1,42 @@
 
 /*-------------   Color variabel  --------------*/
-
+:root {
+	--color__bg: #f4feff;
+	--color__heading : #2b044d;
+	--slicknav__font : #0e0807;
+	--font__color1 : #707b8e;
+	--header__ul : #450b78;
+	--features__caption:hsl(273, 29%, 13%);
+	--card__background :#ffffff;
+	--header__shadow :rgba(25, 25, 25, 0.1);
+	--hover__color :#8f1bdc;
+	--blogcard__background :#fbf9ff;
+	@media screen {
+	  &[data-theme="dark"] {
+		--color__bg: #1F1B24;
+		--color__heading: #e4ebdf;
+		--slicknav__font : #fff;
+		--font__color1 : #eeecea;
+		--header__ul : #ffffff;
+		--features__caption:hsl(270, 40%, 98%);
+		--card__background :#18191c;
+		--header__shadow :rgba(247, 243, 243, 0.1);
+		--hover__color : #4cd3e3;
+		--blogcard__background :#1a1a2e;
+	  }
+	}
+  }
 //Colors
 $white: #ffffff;
 $black: #16161a;
 $gray:#f7f7fd;
 
 // font-color
-$heading-color:#2b044d;
-
+$heading-color:var(--color__heading);
+$header-ul-color :var(--header__ul);
+$slicknav-font : var(--slicknav__font);
+$card__background : var(--card__background);
+$header-shadow : var(--header__shadow);
 //Theme color
 $theme-color: #8f1bdc;
 $theme-color2: #222222;
@@ -47,15 +75,15 @@ $gray-color-2: #bdbdbd;
 $gray-color3:#5c5c5c;
 $white_color:#fff;
 
-
 // font color
-$font_color1: #707b8e;
+$font_color1: var(--font__color1);
+$features-caption:var(--features__caption);
+$sky-blue: var(--color__bg);
+$features-background : var(--color__bg);
 
 $border_color: #fdcb9e;
 $footer_bg: #303030;
 $sidebar_bg: #fbf9ff;
-
-
 
 
 // bg

@@ -2,7 +2,7 @@
     <footer class="">
        <!-- Footer Start-->
       <div class="footer-main">
-        <div class="footer-area ">
+        <div class="footer-area footer-padding">
             <div class="container">
                 <div class="row row-grid align-items-center my-md">
                     <div class="col-lg-6">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row  justify-content-between">
+                <div class="row justify-content-center">
                     <div class="col-lg-3 col-md-4 col-sm-8">
                          <div class="single-footer-caption mb-30">
                               <!-- logo -->

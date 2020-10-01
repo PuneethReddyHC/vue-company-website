@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="services-area">
+    <div class="mt-200">
         <div class="container">
             <!-- Section-tittle -->
             <div class="row d-flex justify-content-center">
@@ -18,7 +18,7 @@
                             <div class="input-group mb-3">
                                 <input type="text" name="q" id="q" autocomplete="off" class="form-control" placeholder="Search Keyword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
                                 <div class="input-group-append">
-                                    <button class="btns" type="submit" id="searchsubmit"><i class="ti-search"></i></button>
+                                    <button class="btns" type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
                         </div>
