@@ -1,18 +1,14 @@
 <template>
     <div id="app">
-      
+        <my-app-header></my-app-header>
         <router-view name="header"></router-view>
         <vue-progress-bar></vue-progress-bar>
         <main>
-          
-          
             <fade-transition origin="center" mode="out-in" :duration="250">
-              
                 <router-view/>
             </fade-transition>
-            
         </main>
-        <router-view name="footer"></router-view>
+        <my-app-footer></my-app-footer>
         <ScrollTopComponent>
           <fade-transition origin="center" mode="out-in" :duration="250">
               <icon name="ni ni-bold-up" size="md" class="bg-gradient-primary" color="white" shadow
@@ -25,9 +21,14 @@
 
 import ScrollTopComponent from './views/components/ScrollTop'
 import { FadeTransition } from "vue2-transitions";
+
+import MyAppHeader from "./layout/MyAppHeader"
+import MyAppFooter from "./layout/MyAppFooter";
 export default {
   components: {
     FadeTransition,
+    MyAppHeader,
+    MyAppFooter,
     ScrollTopComponent
   },
   
@@ -56,6 +57,14 @@ export default {
       //  finish the progress bar
       this.$Progress.finish()
     })
+  },
+  computed: {
+    isI18nLoaded() {
+      return this.$store.getters.isI18nLoaded;
+    },
+    isI18nErrored() {
+      return this.$store.getters.isI18nErrored;
+    }
   }
 };
 </script>

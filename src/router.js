@@ -1,125 +1,105 @@
 import Vue from "vue";
 import Router from "vue-router";
-import AppHeader from "./layout/AppHeader";
-import AppFooter from "./layout/AppFooter";
-import Components from "./views/Components.vue";
-import Landing from "./views/Landing.vue";
-import Login from "./views/Login.vue";
-import Register from "./views/Register.vue";
-import Profile from "./views/Profile.vue";
-import MyHeader from "./layout/MyAppHeader"
-import MyAppFooter from "./layout/MyAppFooter";
-import ContactUs from "./views/ContactUs";
-import PortfolioPage from "./views/PortfolioPage";
-import AboutPage from "./views/AboutPage";
-import BlogPage from "./views/BlogPage";
-import BlogDetails from "./views/BlogDetails";
-Vue.use(Router);
+import home from "./views/home/home.vue";
 
+const contactUs = () => import('./views/contact/contact_us');
+const aboutUs = () => import('./views/about/about_us');
+const blogs = () => import('./views/blogs/blogs');
+const blogdetails = () => import('./views/BlogDetails');
+const portfolio = () => import('./views/portfolio/portfolio');
+const profile = () => import('./views/Profile.vue');
+const login = () => import('./views/login/Login.vue');
+const register = () => import('./views/register/Register.vue');
+const landing = () => import('./views/Landing.vue');
+
+import i18next from 'i18next';
+import store from './store';
+const locale = require('browser-locale')();
+const supportedLocales = ['en', 'de', 'es', 'fr', 'hu', 'it', 'nl', 'pt-br', 'sv', 'tr'];
+import root from './views/root.vue';
+const browserLang = (locale || 'en-US').substring(0, 2);
+
+Vue.use(Router);
+const getLocalizedTitle = key => {
+  return (i18next.t(`common:meta.${key}`) + ' | Agrowdev') || 'Agrowdev';
+};
 const router = new Router({
   linkExactActiveClass: "active",
   routes: [
     {
-      path: "/",
-      name: "components",
-      components: {
-        header: MyHeader,
-        default: Components,
-        footer: MyAppFooter
-      },
-      meta: {
-        showProgressBar: true
-      }
+      path: '*',
+      redirect: `/${browserLang}/home`,
+      
+    },
+    
+    {
+        path: '/home',
+        redirect: `/${browserLang}/home`
     },
     {
-      path: "/landing",
-      name: "landing",
-      components: {
-        header: MyHeader,
-        default: Landing,
-        footer: AppFooter
-      },
-      meta: {
-        showProgressBar: true
-      }
+      path: '/contact-us',
+      redirect: `/${browserLang}/contact-us`
     },
     {
-      path: "/login",
-      name: "login",
-      components: {
-        header: MyHeader,
-        default: Login,
-        footer: AppFooter
-      },
-      meta: {
-        showProgressBar: true
-      }
+        path: '/about-us',
+        redirect: `/${browserLang}/about-us`
     },
     {
-      path: "/register",
-      name: "register",
-      components: {
-        header: MyHeader,
-        default: Register,
-        footer: AppFooter
-      },
-      meta: {
-        showProgressBar: false
-      }
+        path: '/blogs',
+        redirect: `/${browserLang}/blogs`
     },
     {
-      path: "/profile",
-      name: "profile",
-      components: {
-        header: MyHeader,
-        default: Profile,
-        footer: AppFooter
-      }
+        path: '/portfolio',
+        redirect: `/${browserLang}/portfolio`
     },
     {
-      path: "/contact",
-      name: "contact-us",
-      components: {
-        header: MyHeader,
-        default: ContactUs,
-        footer: MyAppFooter
-      }
+        path: '/blogdetails',
+        redirect: `/${browserLang}/blogdetails`
     },
+    
     {
-      path: "/portfolio",
-      name: "portfolio-page",
-      components: {
-        header: MyHeader,
-        default: PortfolioPage,
-        footer: MyAppFooter
-      }
-    },{
-      path: "/about",
-      name: "about-page",
-      components: {
-        header: MyHeader,
-        default: AboutPage,
-        footer: MyAppFooter
-      }
+      path: '/:locale',
+      component: root,
+      children: [
+        {
+          path: 'home',
+          name: 'home',
+          component: home
+        },
+        {
+            path: 'about-us',
+            name: 'about-us',
+            component: aboutUs
+        },
+        {
+            path: 'contact-us',
+            name: 'contact-us',
+            component: contactUs
+        },
+        {
+            path: 'blogs',
+            name: 'blogs',
+            component: blogs
+        },
+        {
+            path: 'blogdetails',
+            name: 'blogdetails',
+            component: blogdetails
+        },
+        {
+            path: 'portfolio',
+            name: 'portfolio',
+            component: portfolio
+        },
+        
+        {
+            path: '*',
+            redirect: `/${browserLang}/home`
+        }
+          
+      ]
     },
-    {
-      path: "/blogs",
-      name: "blogs-page",
-      components: {
-        header: MyHeader,
-        default: BlogPage,
-        footer: MyAppFooter
-      }
-    },
-    {
-      path: "/blogdetails",
-      name: "blogdetails-page",
-      components: {
-        header: MyHeader,
-        default: BlogDetails,
-        footer: MyAppFooter
-      }
-    }
+    
   ],
   scrollBehavior: to => {
     if (to.hash) {
@@ -130,6 +110,29 @@ const router = new Router({
   }
 });
 
+router.beforeEach((to, from, next) => {
+  let locale = to.params.locale;
+  if (!locale && to.name === 'manifesto') {
+      locale = to.path.split('/')[1];
+  } else if (!locale) {
+      locale = browserLang;
+  }
 
+  // ugly workaround for waiting until the translations are ready
+  // to set the title
+  const interval = setInterval(() => {
+      if (store.getters.isI18nLoaded) {
+          document.title = getLocalizedTitle(to.name);
+          clearInterval(interval);
+      }
+  }, 500);
+
+  if (supportedLocales.indexOf(locale) === -1) {
+      next('/en/home');
+  } else {
+      i18next.changeLanguage(locale);
+      return next();
+  }
+});
 
 export default router

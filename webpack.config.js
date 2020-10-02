@@ -2,6 +2,10 @@ module.exports = {
     module: {
       rules: [
         {
+          test: /\.exec\.js$/,
+          use: [ 'script-loader' ]
+        },
+        {
           test: /\.s(c|a)ss$/,
           use: [
             'vue-style-loader',

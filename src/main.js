@@ -24,6 +24,24 @@ import VueProgressBar from 'vue-progressbar'
 import '@morioh/v-lightbox/dist/lightbox.css';
 import Lightbox from '@morioh/v-lightbox'
 import CKEditor from '@ckeditor/ckeditor5-vue';
+import store from './store';
+import buildLocale from './lib/buildLocale';
+require('script-loader!raven-js/dist/vue/raven.js');
+
+// Raven loaded through script tag
+const Raven = window['Raven'] || {
+    context(startApp) {
+        startApp()
+    },
+    config() {
+        return {
+            install() {
+
+            }
+        }
+    }
+};
+Raven.config('https://6a956b3aff1f40bb9d75b5f9496b801e@o377184.ingest.sentry.io/5448402').install();
 
 Vue.config.productionTip = false;
 
@@ -40,12 +58,16 @@ const options = {
   location: 'top',
   inverse: false
 }
-Vue.use(VueProgressBar, options)
-Vue.use(Lightbox);
-Vue.use(Argon);
-Vue.use( CKEditor );
-new Vue({
-  router,
-  
-  render: h => h(App)
-}).$mount("#app");
+Raven.context(function () {
+  Vue.use(VueProgressBar, options)
+  Vue.use(Lightbox);
+  Vue.use(Argon);
+  Vue.use( CKEditor );
+  const i18n = buildLocale(store);
+  new Vue({
+    router,
+    i18n,
+    store,
+    render: h => h(App)
+  }).$mount("#app");
+});

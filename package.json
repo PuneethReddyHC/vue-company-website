@@ -12,11 +12,17 @@
     "@ckeditor/ckeditor5-build-classic": "^22.0.0",
     "@ckeditor/ckeditor5-vue": "^1.0.3",
     "@morioh/v-lightbox": "^1.0.3",
+    "@panter/vue-i18next": "^0.15.2",
     "bootstrap-vue": "^2.0.4",
+    "browser-locale": "^1.0.3",
     "express": "^4.17.1",
     "flatpickr": "^4.5.1",
+    "i18next": "^19.7.0",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-xhr-backend": "^3.2.2",
     "jquery": "^3.5.1",
     "nouislider": "^11.1.0",
+    "raven-js": "^3.27.2",
     "register-service-worker": "^1.5.2",
     "serve-static": "^1.14.1",
     "vue": "^2.6.6",
@@ -25,7 +31,8 @@
     "vue-lazyload": "^1.2.6",
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.0.2",
-    "vue2-transitions": "^0.2.3"
+    "vue2-transitions": "^0.2.3",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2",
@@ -37,6 +44,7 @@
     "node-sass": "^4.11.0",
     "sass": "^1.26.11",
     "sass-loader": "^7.3.1",
+    "script-loader": "^0.7.2",
     "vue-template-compiler": "^2.6.6"
   }
 }

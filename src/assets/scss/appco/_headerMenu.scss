@@ -34,13 +34,12 @@
                 & > a{
                     color: $header-ul-color ;
                     font-weight: 400;
-                    padding: 39px 16px;
-                    font-weight: 400;
+                    padding: 36px 10px;
                     @media #{$lg}{
-                        padding: 39px 15px;
+                        padding: 39px 12px;
                     }
                     display: block;
-                    font-size: 16px;
+                    font-size: 15px;
                     @include transition(.3s);
                     text-transform: capitalize;
 
@@ -149,7 +148,7 @@
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
-	padding: 25px 16px;
+	padding: 25px 10px;
 }
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a::before {
 	bottom: 11px;

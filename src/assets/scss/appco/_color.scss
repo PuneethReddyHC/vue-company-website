@@ -13,16 +13,16 @@
 	--blogcard__background :#fbf9ff;
 	@media screen {
 	  &[data-theme="dark"] {
-		--color__bg: #1F1B24;
+		--color__bg: #171941;
 		--color__heading: #e4ebdf;
 		--slicknav__font : #fff;
 		--font__color1 : #eeecea;
 		--header__ul : #ffffff;
 		--features__caption:hsl(270, 40%, 98%);
-		--card__background :#18191c;
+		--card__background :#1f2251;
 		--header__shadow :rgba(247, 243, 243, 0.1);
 		--hover__color : #4cd3e3;
-		--blogcard__background :#1a1a2e;
+		--blogcard__background :#1f2251;
 	  }
 	}
   }
