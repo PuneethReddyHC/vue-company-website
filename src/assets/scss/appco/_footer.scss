@@ -47,9 +47,16 @@
                 width: 100%;
                 height: 43px;
                 padding: 10px 20px;
-                border: 1px solid #fff;
-                background: #f9f9fe;
+                border: 1px solid var(--border__color);
+                background: transparent;
+                &:focus {
+                    border-color: #f0e9ff;
+                    outline: 0;
+                    box-shadow: none;
+                    color: var(--font__color1);
+                }
             }
+            
             & .form-icon{
                 & button{
                     position: absolute;

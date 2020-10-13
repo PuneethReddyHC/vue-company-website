@@ -7,22 +7,24 @@
 	--font__color1 : #707b8e;
 	--header__ul : #450b78;
 	--features__caption:hsl(273, 29%, 13%);
-	--card__background :#ffffff;
+	--card__background :#fbf9ff;
 	--header__shadow :rgba(25, 25, 25, 0.1);
 	--hover__color :#8f1bdc;
 	--blogcard__background :#fbf9ff;
+	--border__color :  #e5e6e9;
 	@media screen {
 	  &[data-theme="dark"] {
 		--color__bg: #171941;
-		--color__heading: #e4ebdf;
+		--color__heading: #ebf8e2;
 		--slicknav__font : #fff;
-		--font__color1 : #eeecea;
+		--font__color1 : #c1c9d2;
 		--header__ul : #ffffff;
 		--features__caption:hsl(270, 40%, 98%);
 		--card__background :#1f2251;
 		--header__shadow :rgba(247, 243, 243, 0.1);
-		--hover__color : #4cd3e3;
+		--hover__color : #11cdef;
 		--blogcard__background :#1f2251;
+		--border__color :  #2b3553;
 	  }
 	}
   }
@@ -78,7 +80,7 @@ $white_color:#fff;
 // font color
 $font_color1: var(--font__color1);
 $features-caption:var(--features__caption);
-$sky-blue: var(--color__bg);
+$theme-toggle: var(--color__bg);
 $features-background : var(--color__bg);
 
 $border_color: #fdcb9e;

@@ -15,9 +15,8 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-features mb-70">
-                                    <div class="icon feature-icon-shape bg-gradient-primary rounded-circle text-white">
-                                        <i class="ni ni-spaceship"></i>
-                                    </div>
+                                    <icon name="ni ni-spaceship" class="icon feature-icon-shape bg-gradient-primary text-white" size="lg" type="primary" shadow
+                                        rounded></icon>
                                     <div class="features-caption">
                                         <h3>Easy to Costomize</h3>
                                         <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
@@ -26,9 +25,9 @@
                             </div>
                              <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-features mb-70">
-                                    <div class="icon feature-icon-shape bg-gradient-warning rounded-circle text-white">
-                                        <i class="ni ni-spaceship"></i>
-                                    </div>
+                                    <icon name="ni ni-spaceship" class="icon feature-icon-shape bg-gradient-warning text-white" size="lg" type="warning" shadow
+                                        rounded></icon>
+                                    
                                     <div class="features-caption">
                                         <h3>Extreme Security</h3>
                                         <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
@@ -37,9 +36,8 @@
                             </div> 
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-features mb-70">
-                                    <div class="icon feature-icon-shape bg-gradient-danger rounded-circle text-white">
-                                        <i class="ni ni-spaceship"></i>
-                                    </div>
+                                    <icon name="ni ni-spaceship" class="icon feature-icon-shape bg-gradient-danger text-white" size="lg" type="danger" shadow
+                                        rounded></icon>
                                     <div class="features-caption">
                                         <h3>Customer Support</h3>
                                         <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>
@@ -48,9 +46,8 @@
                             </div>
                              <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-features mb-70">
-                                    <div class="icon feature-icon-shape bg-gradient-success rounded-circle text-white">
-                                        <i class="ni ni-spaceship"></i>
-                                    </div>
+                                    <icon name="ni ni-spaceship" class="icon feature-icon-shape bg-gradient-success text-white" size="lg" type="success" shadow
+                                        rounded></icon>
                                     <div class="features-caption">
                                         <h3>Creative Design</h3>
                                         <p>Aorem psum olorsit amet ectetur adipiscing elit, sed dov.</p>

@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="mt-200">
+    <div class="mt-120">
         <div class="container">
             <!-- Section-tittle -->
             <div class="row d-flex justify-content-center">
@@ -22,7 +22,6 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit" id="searchsubmit">Search</button>
                     </form>
                 </aside>
 
@@ -68,7 +67,9 @@ export default {
   }
 };
 </script>
-<style>
-
+<style lang="scss">
+.form-control {
+    background-color: transparent;
+}
 
 </style>

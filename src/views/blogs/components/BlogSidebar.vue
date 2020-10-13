@@ -103,7 +103,7 @@
                     </li>
                 
                     <li>
-                        <a href="/tag/cambly.html" title="1 cambly">cambly (1)</a>
+                        <a href="/tag/cambly.html" class="badge bage-primary badge-lg" title="1 cambly">cambly (1)</a>
                     </li>
                 
                     <li>

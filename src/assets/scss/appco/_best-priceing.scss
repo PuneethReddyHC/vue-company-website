@@ -53,9 +53,9 @@
     .single-card{
         position: relative;
         background: $card__background;
-        padding: 40px 25px;
+        padding: 4px 5px;
         border-radius: 6px;
-        box-shadow: 0px 0px 9px 0px rgba(131, 93, 248, 0.07);
+        box-shadow: 0px 0px 9px 0px rgba(204, 203, 209, 0.07);
         @include transition(.4s);
         &::before{
             background-image: url(../img/gallery/card_dot.png);
@@ -75,20 +75,20 @@
             border-bottom: 2px solid#f4f4f4;
             margin-bottom: 46px;
             span{
-                color: #57667e;
+                color: var(--font__color1);
                 font-size: 24px;
                 margin-bottom: 19px;
                 display: inline-block;
             }
             h4{
-                color:#6a56a6;
+                color: var(--hover__color);
                 font-size: 50px;
                 font-weight: 500;
                 margin-bottom: 26px;
                 padding-right: 3px;
                 font-family: $font_2;
                 span{
-                    color: #6a56a6;
+                    color: var(--font__color1);
                     font-size: 16px;
                 }
             }
@@ -96,7 +96,7 @@
         .card-bottom{
             ul{
                 li{
-                    color:#717081;
+                    color:var(--font__color1);
                     font-weight: 300;
                     margin-bottom: 16px;
                     font-size: 16px;

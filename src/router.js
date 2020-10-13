@@ -7,6 +7,7 @@ const aboutUs = () => import('./views/about/about_us');
 const blogs = () => import('./views/blogs/blogs');
 const blogdetails = () => import('./views/BlogDetails');
 const portfolio = () => import('./views/portfolio/portfolio');
+const careers = () => import('./views/careers/careers');
 const profile = () => import('./views/Profile.vue');
 const login = () => import('./views/login/Login.vue');
 const register = () => import('./views/register/Register.vue');
@@ -24,6 +25,7 @@ const getLocalizedTitle = key => {
   return (i18next.t(`common:meta.${key}`) + ' | Agrowdev') || 'Agrowdev';
 };
 const router = new Router({
+  mode: 'history',
   linkExactActiveClass: "active",
   routes: [
     {
@@ -55,6 +57,10 @@ const router = new Router({
     {
         path: '/blogdetails',
         redirect: `/${browserLang}/blogdetails`
+    },
+    {
+      path: '/careers',
+      redirect: `/${browserLang}/careers`
     },
     
     {
@@ -91,7 +97,11 @@ const router = new Router({
             name: 'portfolio',
             component: portfolio
         },
-        
+        {
+          path: 'careers',
+          name: 'careers',
+          component: careers
+        },
         {
             path: '*',
             redirect: `/${browserLang}/home`

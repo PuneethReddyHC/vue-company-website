@@ -31,7 +31,26 @@ export default {
     AmazingTeam,
     Carousel,
     SayHelloArea,
-  }
+  },
+  metaInfo() {
+        return { 
+            title: "Epiloge - Build your network in your field of interest",
+            meta: [
+                { name: 'description', content:  'Epiloge is about connecting in your field of interest. Our vision is to help people share their knowledge, work, projects, papers and ideas and build their network through what they do rather where they live, study or work.'},
+                { property: 'og:title', content: "Epiloge - Build your network in your field of interest"},
+                { property: 'og:site_name', content: 'Epiloge'},
+                { property: 'og:type', content: 'website'},    
+                { name: 'robots', content: 'index,follow'},
+                { name: 'twitter:card', value: 'Agrodev | Agro network'} ,
+                { name: 'twitter:site', value: '@Agrowdev'} ,
+                { property:"og:url", content:"https://about.agrowdev.tech"},
+                { property:"og:image", content:"https://snag.gy/vh8q2G.jpg"},
+                { property:"og:description", content:"Ethical social network for a brighter tomorrow."},
+                { name:"referrer", content:"no-referrer"}
+
+            ]
+      }
+  },
 };
 </script>
 <style>

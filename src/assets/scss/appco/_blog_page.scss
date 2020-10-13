@@ -675,21 +675,22 @@
 
         .form-control {
             height: 50px;
-            border-color: #f0e9ff;
+            border-color: var(--border__color);
             font-size: 13px;
             color: #999999;
             padding-left: 20px;
             border-radius: 0;
             border-right: 0;
-
+            background: transparent;
             &::placeholder {
-                color: #999999;
+                color: var(--font__color1);
             }
 
             &:focus {
                 border-color: #f0e9ff;
                 outline: 0;
                 box-shadow: none;
+                color: var(--font__color1);
             }
         }
 
@@ -698,7 +699,7 @@
             button {
                 background:$theme-color;
                 border-left: 0;
-                border: 1px solid #f0e9ff;
+                border: 1px solid var(--border__color);
                 padding: 4px 15px;
                 border-left: 0;
                 cursor: pointer;
@@ -838,12 +839,12 @@
                 a {
                     display: inline-block;
                     border: 1px solid #eeeeee;
-                    background: #fff;
+                    background: var(--color__bg);
                     padding: 4px 20px;
                     margin-bottom: 8px;
                     margin-right: 3px;
                     transition: all 0.3s ease 0s;
-                    color: #888888;
+                    color: var(--font__color1);
                     font-size: 13px;
 
                     &:hover {

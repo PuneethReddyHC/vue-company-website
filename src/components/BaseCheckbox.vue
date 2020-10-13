@@ -1,4 +1,5 @@
 <template>
+
   <div class="custom-control custom-checkbox"
        :class="[{disabled: disabled}, inlineClass]">
     <input :id="cbId"
@@ -11,6 +12,7 @@
         <span v-if="inline">&nbsp;</span>
       </slot>
     </label>
+    
   </div>
 </template>
 <script>

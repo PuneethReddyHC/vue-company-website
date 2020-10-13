@@ -1,7 +1,7 @@
 <template>
     <div>
         <portfolio-buttons></portfolio-buttons>
-        <section class="sky-blue">
+        <section>
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">

@@ -10,7 +10,8 @@ import BaseSlider from "../components/BaseSlider";
 import BaseSwitch from "../components/BaseSwitch";
 import Card from "../components/Card";
 import Icon from "../components/Icon";
-
+import CustomCheckbox from "../components/CustomCheckbox";
+import NiceSelect from "../components/NiceSelect";
 export default {
   install(Vue) {
     Vue.component(Badge.name, Badge);
@@ -25,5 +26,6 @@ export default {
     Vue.component(BaseSwitch.name, BaseSwitch);
     Vue.component(Card.name, Card);
     Vue.component(Icon.name, Icon);
+    Vue.component(CustomCheckbox.name, CustomCheckbox);
   }
 };

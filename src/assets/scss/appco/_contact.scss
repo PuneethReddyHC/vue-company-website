@@ -59,7 +59,7 @@
   }
 
   .form-control{
-    border: 1px solid #e5e6e9;
+    border: 1px solid var(--border__color);
     border-radius: 0px;
     height: 48px;
     padding-left: 18px;
@@ -73,7 +73,7 @@
 
     &::placeholder{
       font-weight: 300;
-      color: #999999;
+      color: var(--font__color1);
     }
   }
 

@@ -18,16 +18,20 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import Argon from "./plugins/argon-kit";
 import './registerServiceWorker';
 import VueProgressBar from 'vue-progressbar'
-import '@morioh/v-lightbox/dist/lightbox.css';
-import Lightbox from '@morioh/v-lightbox'
 import CKEditor from '@ckeditor/ckeditor5-vue';
 import store from './store';
 import buildLocale from './lib/buildLocale';
+import VueMeta from 'vue-meta';
+import '@/assets/js/jquery.slicknav.min.js';
+import '@/assets/js/slick.min.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+import VeeValidate from 'vee-validate';
 require('script-loader!raven-js/dist/vue/raven.js');
-
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import Argon from "./plugins/argon-kit";
 // Raven loaded through script tag
 const Raven = window['Raven'] || {
     context(startApp) {
@@ -59,10 +63,15 @@ const options = {
   inverse: false
 }
 Raven.context(function () {
-  Vue.use(VueProgressBar, options)
-  Vue.use(Lightbox);
+  // Install BootstrapVue
+  Vue.use(BootstrapVue);
+  // Optionally install the BootstrapVue icon components plugin
+  Vue.use(IconsPlugin);
+  Vue.use(VueProgressBar, options);
   Vue.use(Argon);
   Vue.use( CKEditor );
+  Vue.use(VueMeta);
+  Vue.use(VeeValidate);
   const i18n = buildLocale(store);
   new Vue({
     router,

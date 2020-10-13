@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <my-app-header></my-app-header>
+      <div v-if="isI18nLoaded">
+        <app-header></app-header>
         <router-view name="header"></router-view>
         <vue-progress-bar></vue-progress-bar>
         <main>
@@ -8,13 +9,19 @@
                 <router-view/>
             </fade-transition>
         </main>
-        <my-app-footer></my-app-footer>
+        <app-footer></app-footer>
         <ScrollTopComponent>
           <fade-transition origin="center" mode="out-in" :duration="250">
               <icon name="ni ni-bold-up" size="md" class="bg-gradient-primary" color="white" shadow
                   rounded></icon>
           </fade-transition>
       </ScrollTopComponent>
+      </div>
+        <div v-else-if="isI18nErrored">Something went wrong...</div>
+        <div v-else>
+            <b-spinner variant="primary" class="spinners" label="Text Centered"></b-spinner>
+        
+        </div>
     </div>
 </template>
 <script>
@@ -22,13 +29,13 @@
 import ScrollTopComponent from './views/components/ScrollTop'
 import { FadeTransition } from "vue2-transitions";
 
-import MyAppHeader from "./layout/MyAppHeader"
-import MyAppFooter from "./layout/MyAppFooter";
+import AppHeader from "./layout/header/Header"
+import AppFooter from "./layout/footer/Footer";
 export default {
   components: {
     FadeTransition,
-    MyAppHeader,
-    MyAppFooter,
+    AppHeader,
+    AppFooter,
     ScrollTopComponent
   },
   
@@ -68,3 +75,13 @@ export default {
   }
 };
 </script>
+<style scoped>
+.spinners {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+}
+</style>

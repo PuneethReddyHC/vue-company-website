@@ -1,5 +1,5 @@
 <template>
-    <section class="service-area sky-blue section-padding2">
+    <section class="service-area theme-toggle section-padding2">
             <div class="container">
                 <!-- Section Tittle -->
                 <div class="row d-flex justify-content-center">
