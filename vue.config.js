@@ -17,11 +17,7 @@ module.exports = {
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: '#172b4d',
     workboxPluginMode: 'InjectManifest',
-    workboxOptions: {
-      // swSrc is required in InjectManifest mode.
-      swSrc: 'dev/sw.js',
-      // ...other Workbox options...
-    }
+    
   },
   css: {
     // Enable CSS source maps.
