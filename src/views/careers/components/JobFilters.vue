@@ -173,12 +173,7 @@ export default {
   data() {
       return {
         
-        checkboxes: {
-            unchecked: false,
-            checked: true,
-            uncheckedDisabled: false,
-            checkedDisabled: true
-        },
+        selected: null,
         jobtype: ['1'],
         arrayOfObjects: ['puneeth','heam'],
         object: {

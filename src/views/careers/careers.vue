@@ -9,14 +9,15 @@
                             <h2 class="heading">Job <span class="text-success">Listing</span> Blogs.
                             </h2>
                         </div>
-                        
+                       
                     </div>
                     
                 </div>
             </div>
         </div>
-        <b-button v-b-toggle.sidebar-1 class="d-block d-sm-block d-md-none">Filters</b-button>
-            <b-sidebar id="sidebar-1" text-variant="light" shadow>
+        <filter-button v-b-toggle.sidebar-1 class="filter-btn d-block d-sm-block d-md-none"></filter-button>
+        
+        <b-sidebar id="sidebar-1" text-variant="light" shadow>
             <div class="px-3 py-2">
                 <job-filters></job-filters>
             </div>
@@ -78,11 +79,18 @@
 import JobCard from "./components/JobCard";
 import JobFilters from "./components/JobFilters";
 import JobPagination from "./components/JobPagination";
+import FilterButton from "./components/FilterButton";
 export default {
   name: "careers-page",
+  data() {
+      return {
+        selected: null,
+      }
+    },
   components: {
     JobCard,
     JobPagination,
+    FilterButton,
     JobFilters
   },
   mounted(){
@@ -96,7 +104,11 @@ export default {
 };
 </script>
 <style lang="scss">
-
+.filter-btn{
+    z-index: 100;
+    top: 90px;
+    left: 0;
+}
 .custom-select {
     
     color: var(--slicknav__font);
