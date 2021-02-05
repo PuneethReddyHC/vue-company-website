@@ -12,7 +12,7 @@
     "@ckeditor/ckeditor5-build-classic": "^22.0.0",
     "@ckeditor/ckeditor5-vue": "^1.0.3",
     "@panter/vue-i18next": "^0.15.2",
-    "axios": "^0.20.0",
+    "axios": ">=0.21.1",
     "bootstrap-vue": "^2.17.3",
     "browser-locale": "^1.0.3",
     "express": "^4.17.1",
